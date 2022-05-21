@@ -1,7 +1,8 @@
 // WasmFiddle converter from C to Wasm: https://wasdk.github.io/WasmFiddle/
+#include <string.h>
 
 void num_log(int number);
-void str_log(char *message);
+void str_log(char *offset, int length);
 
 int main()
 {
@@ -10,7 +11,8 @@ int main()
 
 void greet()
 {
-  str_log("Hello from C programming language!");
+  char *message = "Hello from C programming language!";
+  str_log(message, strlen(message));
 }
 
 void get_double_number(int number)

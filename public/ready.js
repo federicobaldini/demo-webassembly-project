@@ -1,0 +1,1 @@
+console.log("main.js Ready - Run some task here!")

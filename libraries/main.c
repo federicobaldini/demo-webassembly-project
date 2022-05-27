@@ -2,6 +2,6 @@
 
 int main()
 {
-  printf("WASM Ready!\n");
+  printf("WASM Ready - Testing with Emscripten HTML!\n");
   return 42;
 }

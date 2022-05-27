@@ -1,0 +1,19 @@
+// Create JavaScript module
+emcc libraries/main.c -s WASM=1 -o public/main.js
+
+// Create HTML module
+emcc libraries/main.c -s WASM=1 -o public/main.html
+
+// Create single WASM module
+emcc libraries/main.c -s WASM=1 -s SIDE_MODULE=1 -o public/main.wasm
+
+// Files details
+ls -ls public
+
+// Optimization command
+emcc libraries/main.c -s WASM=1 -O2 -o public/main.js
+
+// Append the ready.js file to the main.js file
+// Extremely useful for running something before or after initializing a WASM
+// For adding the JavaScript module before, instead of --post-js use --pre-js
+emcc libraries/main.c -s WASM=1 --post-js public/ready.js -o public/main.js

@@ -17,3 +17,6 @@ emcc libraries/main.c -s WASM=1 -O2 -o public/main.js
 // Extremely useful for running something before or after initializing a WASM
 // For adding the JavaScript module before, instead of --post-js use --pre-js
 emcc libraries/main.c -s WASM=1 --post-js public/ready.js -o public/main.js
+
+// Exporting C functions to JavaScript
+emcc libraries/main.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_main']" -o public/main.js

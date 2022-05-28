@@ -6,8 +6,10 @@
   </head>
   <body>
     <h1>WebAssembly Demo</h1>
-    <script type="module">
-      import "./main.js";
+    <script src="./main.js"></script>
+    <script>
+      // Wrap C _greet function as a JavaScript function
+      const greet = cwrap("greet", "string", ["string"]);
     </script>
   </body>
 </html>

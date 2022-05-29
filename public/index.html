@@ -10,6 +10,16 @@
     <script>
       // Wrap C _greet function as a JavaScript function
       const greet = cwrap("greet", "string", ["string"]);
+
+      // Return a usable int value to C
+      function getNumber() {
+        return 22;
+      }
+
+      // Return a usable string value to C
+      function getString() {
+        return "Hello from JavaScript!";
+      }
     </script>
   </body>
 </html>

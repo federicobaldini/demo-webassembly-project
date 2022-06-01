@@ -1,8 +1,18 @@
+#include <emscripten.h>
 #include <string.h>
 
 int get_number()
 {
-  return 22;
+  int number = 22;
+
+  // emscripten_debugger();
+
+  if (number < 30)
+  {
+    emscripten_log(EM_LOG_WARN, "'number' less than 30");
+  }
+
+  return number;
 }
 
 int get_double_number(int number)

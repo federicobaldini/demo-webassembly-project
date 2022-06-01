@@ -20,3 +20,6 @@ emcc libraries/main.c -s WASM=1 --post-js public/ready.js -o public/main.js
 
 // Exporting C functions to JavaScript
 emcc libraries/main.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_main']" -o public/main.js
+
+// Change memory buffer size
+emcc libraries/main.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_main']" -s TOTAL_MEMORY=64MB -o public/main.js

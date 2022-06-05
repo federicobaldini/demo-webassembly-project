@@ -20,6 +20,12 @@
       function getString() {
         return "Hello from JavaScript!";
       }
+
+      // Wait for WASM (Emscripten) runtime to be ready
+      Module["onRuntimeInitialized"] = () => {
+        console.log("Runtime ready!");
+        console.log(_get_string_value());
+      };
     </script>
   </body>
 </html>

@@ -23,3 +23,6 @@ emcc libraries/main.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_main']" -o public/main
 
 // Change memory buffer size
 emcc libraries/main.c -s WASM=1 -s EXPORTED_FUNCTIONS="['_main']" -s TOTAL_MEMORY=64MB -o public/main.js
+
+// Emrun
+emcc libraries/main.c -s WASM=1 --emrun -o public/main.js

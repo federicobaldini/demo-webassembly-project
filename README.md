@@ -16,5 +16,5 @@ then start the development server:
 npm run dev
 ```
 
-Navigate to [localhost:2222](http://localhost:2222). You should see your app running.
+Navigate to [localhost:2222](http://localhost:2222). You should see the app running.
 

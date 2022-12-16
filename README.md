@@ -13,7 +13,7 @@ npm install
 then start the development server:
 
 ```
-npm run dev
+npm run start
 ```
 
 Navigate to [localhost:2222](http://localhost:2222). You should see the app running.
